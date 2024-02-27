@@ -1,5 +1,5 @@
 const gridContainer = document.getElementById('grid-container');
-let containerWidth = gridContainer.offsetWidth;
+let containerWidth = gridContainer.clientWidth;
 let input = 16;
 let totalSquares = Math.pow(input, 2);
 
