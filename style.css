@@ -3,9 +3,17 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+}
+
 #grid-container {
+    border: 15px solid #540d6e;
     display: flex;
     flex-wrap: wrap;
+    height: 90vh;
+    width: 90vh;
 }
 
 .square {
