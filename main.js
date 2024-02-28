@@ -1,8 +1,6 @@
 const gridContainer = document.getElementById('grid-container');
 let containerWidth = gridContainer.clientWidth;
 
-console.log(containerWidth);
-
 const removeChildEls = (parent) => {
     while (parent.lastChild) {
         parent.removeChild(parent.lastChild);
@@ -28,22 +26,14 @@ function makeGrid(num) {
     let fullWidthStr = fullWidth + 'px';
     gridContainer.style.width = fullWidthStr;
     gridContainer.style.height = fullWidthStr;
-    console.log(fullWidthStr);
 
     const squares = Array.from(document.getElementsByClassName('square'));
     
     squares.forEach(square => {
         square.addEventListener('mouseenter', function darkenSquare(event) {
             square.style.backgroundColor = 'black';
-            console.log('hovered');
         })
     }) 
-    /* document.querySelectorAll('.square').forEach(item => {
-        item.addEventListener('mouseenter', darkenSquare => {
-            item.classList.add('.darkened');
-            console.log('hovered');
-        })
-    }) */
 }
 
 const startBtn = document.getElementById('start-btn');
@@ -53,6 +43,5 @@ startBtn.addEventListener('click', promptUser => {
 
     if (input > 0 && input < 101) {
         makeGrid(input);
-        console.log(input);
     } else alert('Please click Start again and choose a number between 1 and 100');
 })
