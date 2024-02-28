@@ -30,6 +30,7 @@ button {
     flex-wrap: wrap;
     height: 90vh;
     justify-content: center;
+    margin-bottom: 15px;
     width: 90vh;
 }
 
