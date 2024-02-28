@@ -1,12 +1,12 @@
 const gridContainer = document.getElementById('grid-container');
 let containerWidth = gridContainer.clientWidth;
-let input = Number(prompt('Choose a number between 1 and 100'));
-let totalSquares = Math.pow(input, 2);
+
 console.log(containerWidth);
 
-function makeGrid() {
-    const sideLength = containerWidth / input;
+function makeGrid(num) {
+    const sideLength = containerWidth / num;
     const sideLengthStr = sideLength + 'px';
+    let totalSquares = Math.pow(num, 2);
 
     for (let i = 0; i < totalSquares; i++) {
         const newSquare = document.createElement('div');
@@ -16,11 +16,20 @@ function makeGrid() {
         newSquare.style.height = sideLengthStr;
     }
 
-    let fullWidth = sideLength * input;
+    let fullWidth = sideLength * num;
     let fullWidthStr = fullWidth + 'px';
     gridContainer.style.width = fullWidthStr;
     gridContainer.style.height = fullWidthStr;
     console.log(fullWidthStr);
 }
 
-makeGrid();
+const startBtn = document.getElementById('start-btn');
+
+startBtn.addEventListener('click', promptUser => {
+    let input = Number(prompt('Choose a number between 1 and 100'));
+
+    if (input > 0 && input < 101) {
+        makeGrid(input);
+        console.log(input);
+    } else alert('Please click Start again and choose a number between 1 and 100');
+})
