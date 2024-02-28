@@ -3,7 +3,15 @@ let containerWidth = gridContainer.clientWidth;
 
 console.log(containerWidth);
 
+const removeChildEls = (parent) => {
+    while (parent.lastChild) {
+        parent.removeChild(parent.lastChild);
+    }
+};
+
 function makeGrid(num) {
+    removeChildEls(gridContainer);
+
     const sideLength = containerWidth / num;
     const sideLengthStr = sideLength + 'px';
     let totalSquares = Math.pow(num, 2);
