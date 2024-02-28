@@ -4,15 +4,19 @@
 }
 
 body {
+    background-color: #cec2ff; /* Periwinkle */
     display: flex;
     justify-content: center;
 }
 
 #grid-container {
-    border: 15px solid #540d6e;
+    align-content: center;
+    background-color: #fff;
+    border: 15px solid #540d6e; /* Indigo */
     display: flex;
     flex-wrap: wrap;
     height: 90vh;
+    justify-content: center;
     width: 90vh;
 }
 
