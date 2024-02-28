@@ -12,7 +12,7 @@ const removeChildEls = (parent) => {
 function makeGrid(num) {
     removeChildEls(gridContainer);
 
-    const sideLength = containerWidth / num;
+    const sideLength = Math.round(containerWidth / num);
     const sideLengthStr = sideLength + 'px';
     let totalSquares = Math.pow(num, 2);
 
