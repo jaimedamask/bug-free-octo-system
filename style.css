@@ -4,15 +4,28 @@
 }
 
 body {
+    align-items: center;
     background-color: #cec2ff; /* Periwinkle */
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
+
+/* button {
+    background-color: #540d6e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    margin: 25px 0;
+    width: 75px;
+} */
 
 #grid-container {
     align-content: center;
     background-color: #fff;
-    border: 15px solid #540d6e; /* Indigo */
+    border: 35px solid #0ead69; /* Palatinate Blue */
     display: flex;
     flex-wrap: wrap;
     height: 90vh;
