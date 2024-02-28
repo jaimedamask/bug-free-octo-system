@@ -11,7 +11,7 @@ body {
     justify-content: center;
 }
 
-/* button {
+button {
     background-color: #540d6e;
     border: none;
     border-radius: 5px;
@@ -20,7 +20,7 @@ body {
     height: 40px;
     margin: 25px 0;
     width: 75px;
-} */
+} 
 
 #grid-container {
     align-content: center;
