@@ -22,11 +22,6 @@ function makeGrid(num) {
         gridContainer.appendChild(newSquare);
         newSquare.style.width = sideLengthStr;
         newSquare.style.height = sideLengthStr;
-
-        newSquare.addEventListener('mouseenter', function darkenSquare(event) {
-            newSquare.classList.add('.darkened');
-            console.log('hovered');
-        })
     }
 
     let fullWidth = sideLength * num;
@@ -39,10 +34,10 @@ function makeGrid(num) {
     
     squares.forEach(square => {
         square.addEventListener('mouseenter', function darkenSquare(event) {
-            square.classList.add('darkened');
+            square.style.backgroundColor = 'black';
             console.log('hovered');
         })
-    })
+    }) 
     /* document.querySelectorAll('.square').forEach(item => {
         item.addEventListener('mouseenter', darkenSquare => {
             item.classList.add('.darkened');
