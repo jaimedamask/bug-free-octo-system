@@ -14,6 +14,11 @@ function makeGrid(num) {
         gridContainer.appendChild(newSquare);
         newSquare.style.width = sideLengthStr;
         newSquare.style.height = sideLengthStr;
+
+        newSquare.addEventListener('mouseenter', function darkenSquare(event) {
+            newSquare.classList.add('.darkened');
+            console.log('hovered');
+        })
     }
 
     let fullWidth = sideLength * num;
@@ -21,6 +26,21 @@ function makeGrid(num) {
     gridContainer.style.width = fullWidthStr;
     gridContainer.style.height = fullWidthStr;
     console.log(fullWidthStr);
+
+    const squares = Array.from(document.getElementsByClassName('square'));
+    
+    squares.forEach(square => {
+        square.addEventListener('mouseenter', function darkenSquare(event) {
+            square.classList.add('darkened');
+            console.log('hovered');
+        })
+    })
+    /* document.querySelectorAll('.square').forEach(item => {
+        item.addEventListener('mouseenter', darkenSquare => {
+            item.classList.add('.darkened');
+            console.log('hovered');
+        })
+    }) */
 }
 
 const startBtn = document.getElementById('start-btn');
