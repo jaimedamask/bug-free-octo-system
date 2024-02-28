@@ -50,6 +50,6 @@ button {
 }
 
 .square {
-    border: 1px solid black;
+    border: none;
     box-sizing: border-box;
 }
